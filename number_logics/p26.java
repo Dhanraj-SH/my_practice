@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail{
+class p26{
 
     static int toPower(int n, int m){
         if(m == 1) return n;
