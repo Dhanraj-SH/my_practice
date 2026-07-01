@@ -10,7 +10,7 @@ class p15{
         return val;
     }
 
-    public static boolean checkArmstrong(int n){
+    public static boolean checkStrong(int n){
         int val = 0;
         int dupN = n;
         while(n > 0){
@@ -26,7 +26,7 @@ class p15{
         if(n<1){
             System.out.println("Enter a vaild number greater than 1");
         }
-        if(checkArmstrong(n)){
+        if(checkStrong(n)){
             System.out.println("The given number is a Strong number");
         }else{
             System.out.println("Its not a Strong number");

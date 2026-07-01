@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail{
+class p40{
 
     public static boolean  neonNumberSeries(int n){
         return  n == 0 || n == 1 || n == 9; 

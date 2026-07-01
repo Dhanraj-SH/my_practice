@@ -1,16 +1,20 @@
 import java.util.Scanner;
 
-class trail{
+class p38{
 
-    public static boolean  neonNumberSeries(int n){
-        return  n == 0 || n == 1 || n == 9; 
+    static int sqaure(int n){
+        return n * n;
+    }
+
+    public static boolean  automorphicNumberSeries(int n){
+        return (n % 10) == sqaure(n) % 10;
     }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Start point");
         int n = in.nextInt();
-        if(n<-1){
+        if(n<1){
             System.out.println("Enter a valid number greater than 0");
             return;
         }
@@ -20,18 +24,10 @@ class trail{
             System.out.println("Enter a valid end point greater than n");
             return;
         }
-        if(n>10){
-            return;
-        }
-        if(n>-1 || m < 10){    
-            for(int i = n; i<=m; i++){
-                if(neonNumberSeries(i)){
-                    System.out.print(i + ",");
-                }
-                if(n>9){
-                    return;
-                }
-            }        
-        }
+        for(int i = n; i<=m; i++){
+            if(automorphicNumberSeries(i)){
+                System.out.print(i + ",");
+            }
+        }        
     }
 }
