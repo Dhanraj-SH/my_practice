@@ -1,14 +1,27 @@
 import java.util.Scanner;
 
-class trail{
+class p41{
 
-    public static boolean  pronicNumberSeries(int n){
-        int i = 1;
-        while(i <= n/2){
-            if(i*(i+1) == n) return true;
-            i++;
+    static int sum(int n){
+        int val = 0;
+        while(n>0){
+            val += n % 10;
+            n /= 10;
         }
-        return false;
+        return val;
+    }
+    
+    static int multiple(int n){
+        int val = 1;
+        while(n>0){
+            val *= n % 10;
+            n /= 10;
+        }
+        return val;
+    }
+
+    public static boolean  spyNumberSeries(int n){
+        return  sum(n) == multiple(n); 
     }
 
     public static void main(String[] args) {
@@ -29,7 +42,7 @@ class trail{
         }
         
         for(int i = n; i<=m; i++){
-            if(pronicNumberSeries(i)){
+            if(spyNumberSeries(i)){
                 System.out.print(i + ",");
             }
         }        

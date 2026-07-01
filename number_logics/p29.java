@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 class p29{
 
-    // normal method
+    // binary method
     public static boolean checkEvil(int n){
         int count = 0; 
         while(n>0){
             if((n&1) == 1) count++;
             n = n >> 1;
         }
-        return n % 2 == 0;
+        return count % 2 == 0;
     }
 
     public static void main(String[] args) {
@@ -34,5 +34,15 @@ class p29{
     //         n = (n & (n-1));
     //         count++; 
     //     }
-    //     return n % 2 == 0;
+    //     return count % 2 == 0;
+    // }
+
+//regular method
+    // public static boolean checkEvil(int n){
+    //     int count = 0; 
+    //     while(n>0){
+    //         if(x % 2 == 1) count++;
+    //         x /= 2; 
+    //     }
+    //     return count % 2 == 0;
     // }

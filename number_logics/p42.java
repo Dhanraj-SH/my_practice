@@ -1,14 +1,19 @@
 import java.util.Scanner;
 
-class trail{
+class p42{
 
-    public static boolean  pronicNumberSeries(int n){
-        int i = 1;
-        while(i <= n/2){
-            if(i*(i+1) == n) return true;
-            i++;
-        }
-        return false;
+    public static boolean  happyNumberSeries(int n){
+        
+        do{
+            int val = 0;
+            while(n>0){
+                val += n % 10;
+                n /= 10;
+            }
+            n = val;
+        }while(n>9);
+
+        return n == 1; 
     }
 
     public static void main(String[] args) {
@@ -29,7 +34,7 @@ class trail{
         }
         
         for(int i = n; i<=m; i++){
-            if(pronicNumberSeries(i)){
+            if(happyNumberSeries(i)){
                 System.out.print(i + ",");
             }
         }        

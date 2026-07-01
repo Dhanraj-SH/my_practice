@@ -1,12 +1,16 @@
 import java.util.Scanner;
 
-class trail{
+class p43{
 
-    public static boolean  pronicNumberSeries(int n){
-        int i = 1;
-        while(i <= n/2){
-            if(i*(i+1) == n) return true;
-            i++;
+    static int square(int n){
+        return n * n;
+    }
+
+    public static boolean  sunnyNumberSeries(int n){
+        int val = 1;
+        while(val <= n/2 && square(val)<= n){
+            if(square(val) == n) return true;
+            val ++;
         }
         return false;
     }
@@ -29,7 +33,7 @@ class trail{
         }
         
         for(int i = n; i<=m; i++){
-            if(pronicNumberSeries(i)){
+            if(sunnyNumberSeries(i + 1)){
                 System.out.print(i + ",");
             }
         }        

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail{
+class p45{
 
     public static boolean  pronicNumberSeries(int n){
         int i = 1;
