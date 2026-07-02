@@ -1,19 +1,14 @@
 import java.util.Scanner;
 
-class trail{
+class p54{
 
-    static int square(int n){
-        return n * n;
-    }
-
-    public static boolean sunnyNumberSeries(int n){
-        if(n == 0) return true;
-        int val = 1;
-        while(val <= n/2 && square(val)<= n){
-            if(square(val) == n) return true;
-            val ++;
+    public static int harshadNumberSeries(int n){
+        int val = 0;
+        while(n>0){
+            val += n % 10;
+            n /= 10;
         }
-        return false;
+        return val;
     }
 
     public static void main(String[] args) {
@@ -27,7 +22,7 @@ class trail{
         }
         
         for(int i = 1; i<=n; i++){
-            if(sunnyNumberSeries(i)){
+            if( i % harshadNumberSeries(i) == 0){
                 System.out.print(i + ",");
             }
         }        

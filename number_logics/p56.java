@@ -1,19 +1,13 @@
 import java.util.Scanner;
 
-class trail{
+class p56{
 
-    static int square(int n){
-        return n * n;
+    static int sqaure(int n){
+        return  n * n;
     }
 
-    public static boolean sunnyNumberSeries(int n){
-        if(n == 0) return true;
-        int val = 1;
-        while(val <= n/2 && square(val)<= n){
-            if(square(val) == n) return true;
-            val ++;
-        }
-        return false;
+    public static boolean automorphicNumberSeries(int n){
+        return n % 10 == sqaure(n) % 10;
     }
 
     public static void main(String[] args) {
@@ -27,7 +21,7 @@ class trail{
         }
         
         for(int i = 1; i<=n; i++){
-            if(sunnyNumberSeries(i)){
+            if(automorphicNumberSeries(i)){
                 System.out.print(i + ",");
             }
         }        

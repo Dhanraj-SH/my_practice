@@ -1,19 +1,15 @@
 import java.util.Scanner;
 
-class trail{
+class p55{
 
-    static int square(int n){
-        return n * n;
-    }
-
-    public static boolean sunnyNumberSeries(int n){
-        if(n == 0) return true;
+    public static boolean abundantNumberSeries(int n){
         int val = 1;
-        while(val <= n/2 && square(val)<= n){
-            if(square(val) == n) return true;
-            val ++;
+        for(int i=2; i<=n/2; i++){
+            if(n%i==0){
+                val += i;
+            }
         }
-        return false;
+        return val > n;
     }
 
     public static void main(String[] args) {
@@ -27,7 +23,7 @@ class trail{
         }
         
         for(int i = 1; i<=n; i++){
-            if(sunnyNumberSeries(i)){
+            if(abundantNumberSeries(i)){
                 System.out.print(i + ",");
             }
         }        

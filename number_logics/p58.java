@@ -1,19 +1,9 @@
 import java.util.Scanner;
 
-class trail{
+class p58{
 
-    static int square(int n){
-        return n * n;
-    }
-
-    public static boolean sunnyNumberSeries(int n){
-        if(n == 0) return true;
-        int val = 1;
-        while(val <= n/2 && square(val)<= n){
-            if(square(val) == n) return true;
-            val ++;
-        }
-        return false;
+    public static boolean neonNumberSeries(int n){
+        return n == 0 || n == 1 || n == 9;
     }
 
     public static void main(String[] args) {
@@ -25,10 +15,16 @@ class trail{
             System.out.println("Enter a valid number greater than 1");
             return;
         }
+        if(n>9){
+            return;
+        }
         
         for(int i = 1; i<=n; i++){
-            if(sunnyNumberSeries(i)){
+            if(neonNumberSeries(i)){
                 System.out.print(i + ",");
+            }
+            if(i>9){
+                return;
             }
         }        
     }

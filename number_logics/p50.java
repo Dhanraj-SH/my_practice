@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
-class trail{
+class p50{
 
     static int square(int n){
         return n * n;
     }
 
-    public static boolean sunnyNumberSeries(int n){
-        if(n == 0) return true;
-        int val = 1;
-        while(val <= n/2 && square(val)<= n){
-            if(square(val) == n) return true;
-            val ++;
+    public static boolean  perfectSquareNumberSeries(int n){
+        if(n == 1)return true;
+        int numberIncrement = 1;
+        while(square(numberIncrement)<=n){
+            if(square(numberIncrement) == n) return true; 
+            numberIncrement++;
         }
         return false;
     }
@@ -27,7 +27,7 @@ class trail{
         }
         
         for(int i = 1; i<=n; i++){
-            if(sunnyNumberSeries(i)){
+            if(perfectSquareNumberSeries(i)){
                 System.out.print(i + ",");
             }
         }        

@@ -1,19 +1,27 @@
 import java.util.Scanner;
 
-class trail{
+class p59{
 
-    static int square(int n){
-        return n * n;
+    static int sum(int n){
+        int val = 0;
+        while(n>0){
+            val += n % 10;
+            n /= 10;
+        }
+        return val; 
     }
 
-    public static boolean sunnyNumberSeries(int n){
-        if(n == 0) return true;
+    static int multiple(int n){
         int val = 1;
-        while(val <= n/2 && square(val)<= n){
-            if(square(val) == n) return true;
-            val ++;
+        while(n>0){
+            val *= n % 10;
+            n /= 10;
         }
-        return false;
+        return val; 
+    }
+
+    public static boolean spyNumberSeries(int n){
+        return sum(n) == multiple(n);
     }
 
     public static void main(String[] args) {
@@ -27,7 +35,7 @@ class trail{
         }
         
         for(int i = 1; i<=n; i++){
-            if(sunnyNumberSeries(i)){
+            if(spyNumberSeries(i)){
                 System.out.print(i + ",");
             }
         }        

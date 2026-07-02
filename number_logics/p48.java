@@ -1,19 +1,18 @@
 import java.util.Scanner;
 
-class trail{
+class p48{
 
-    static int square(int n){
-        return n * n;
+    static int revNum(int n){
+        int val = 0;
+        while(n>0){
+            val = (val*10) + (n % 10);
+            n /= 10;
+        }
+        return val;
     }
 
-    public static boolean sunnyNumberSeries(int n){
-        if(n == 0) return true;
-        int val = 1;
-        while(val <= n/2 && square(val)<= n){
-            if(square(val) == n) return true;
-            val ++;
-        }
-        return false;
+    public static boolean  palindromeNumberSeries(int n){
+        return n == revNum(n);
     }
 
     public static void main(String[] args) {
@@ -27,7 +26,7 @@ class trail{
         }
         
         for(int i = 1; i<=n; i++){
-            if(sunnyNumberSeries(i)){
+            if(palindromeNumberSeries(i)){
                 System.out.print(i + ",");
             }
         }        
