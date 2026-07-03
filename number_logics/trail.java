@@ -2,34 +2,41 @@ import java.util.Scanner;
 
 class trail{
 
-    static int square(int n){
-        return n * n;
+    static boolean nextPrime(int n){
+        for(int i=2; i*i<=n; i++){
+            if(n%i==0) return false;
+        }
+        return true;
     }
 
-    public static boolean sunnyNumberSeries(int n){
-        if(n == 0) return true;
-        int val = 1;
-        while(val <= n/2 && square(val)<= n){
-            if(square(val) == n) return true;
-            val ++;
+    static boolean uglyNumber(int n){
+        int factor = 2;
+        while(n>0 && factor<6){
+            int presentPrime = factor;
+            if(n%factor==0){
+                n = n/factor;
+            }else{
+                if(nextPrime(n) && n != presentPrime){
+                    factor = n;
+                }else{
+                    n++;
+                }
+            }
         }
-        return false;
+        return n == 1;
     }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("End point");
         int n = in.nextInt();
         if(n<1){
-            System.out.println("Enter a valid number greater than 1");
-            return;
+            System.out.println("Enter number greater then 0");
         }
-        
-        for(int i = 1; i<=n; i++){
-            if(sunnyNumberSeries(i)){
-                System.out.print(i + ",");
-            }
-        }        
+        if(uglyNumber(n)||n==1){
+            System.out.println("The number is a ugly number");
+        }else{
+            System.out.println("The number is not a ugly number");
+        }
     }
 }
