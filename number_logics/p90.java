@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail{
+class p90{
 
     static int amicableNumber(int n){
         int sum = 1;
