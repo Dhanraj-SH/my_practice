@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail {
+class p95{
 
     static int cube(int x) {
         return x * x * x;
