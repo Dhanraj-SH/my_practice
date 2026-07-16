@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail {
+class p96{
 
     static int toPower(int n) {
         int res=1;
@@ -18,6 +18,7 @@ class trail {
         }
         return 1;
     }
+
     static int Mersenne(int n){
         return toPower(n)-1;
     }
