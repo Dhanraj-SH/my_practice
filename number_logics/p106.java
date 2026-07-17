@@ -1,16 +1,17 @@
 import java.util.Scanner;
 
-class p105{
+class p106{
     static boolean checkChar(char ch) {
-        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'; 
+        int asciiValue = (int)(ch);
+        return (asciiValue >= 65 && asciiValue <= 90) || (asciiValue >= 97 && asciiValue <= 120);
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         char ch = in.next().trim().charAt(0);
         if(checkChar(ch)){
-            System.out.println(ch + " is a vowel");
+            System.out.println(ch + " is a alphabet");
         }else{
-            System.out.println(ch + " is a consonant");
+            System.out.println(ch + " is not a alphabet");
         }
     }
 }

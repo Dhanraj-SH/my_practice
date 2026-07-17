@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail {
+class p109{
     static double areaOfCircle(int n){
         return Math.PI * (n * n);
     }
