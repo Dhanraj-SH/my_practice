@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail {
+class p105{
     static boolean checkChar(char ch) {
         return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'; 
     }
