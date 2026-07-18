@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail{
+class p125{
 
     static int countWays(String s, int n) {
         if (n == 0 || n == 1) return 1;
