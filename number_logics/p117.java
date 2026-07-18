@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail{
+class p117{
 
     static int octalToDecimal(int n, int power) {
         if (n == 0) return 0;
