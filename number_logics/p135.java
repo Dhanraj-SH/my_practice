@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail{
+class p135{
 
     static boolean  checkfibnacci(int n, int f1, int f2) {
         int val = f1 + f2;
