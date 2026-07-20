@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail {
+class p138{
 
     static Scanner in = new Scanner(System.in);
 
