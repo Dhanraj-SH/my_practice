@@ -1,6 +1,6 @@
 import java.util.Random;
 
-class trail{
+class p145{
     static Random r = new Random();
 
     static int biasedCoin() {
