@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class trail{
+class p61{
 
     static int square(int n){
         return n * n;
