@@ -1,4 +1,3 @@
-package Easy;
 // import java.io.*;
 // import java.util.stream.*;
 
