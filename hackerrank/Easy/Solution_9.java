@@ -1,14 +1,6 @@
+package Easy;
 // import java.io.*;
-// import java.math.*;
-// import java.security.*;
-// import java.text.*;
-// import java.util.*;
-// import java.util.concurrent.*;
-// import java.util.function.*;
-// import java.util.regex.*;
 // import java.util.stream.*;
-// import static java.util.stream.Collectors.joining;
-// import static java.util.stream.Collectors.toList;
 
 // class SinglyLinkedListNode {
 //     public int data;
@@ -61,10 +53,12 @@
 // class Result {
 
 //     /*
-//      * Complete the 'deleteDuplicates' function below.
+//      * Complete the 'removeKthNodeFromEnd' function below.
 //      *
 //      * The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
-//      * The function accepts INTEGER_SINGLY_LINKED_LIST head as parameter.
+//      * The function accepts following parameters:
+//      *  1. INTEGER_SINGLY_LINKED_LIST head
+//      *  2. INTEGER k
 //      */
 
 //     /*
@@ -77,25 +71,34 @@
 //      *
 //      */
 
-//     public static SinglyLinkedListNode deleteDuplicates(SinglyLinkedListNode head) {
-//     // Write your code here
-//         SinglyLinkedListNode cur = head;
-        
-//         while(cur != null && cur.next != null){
-//             if(cur.data == cur.next.data){
-//                 cur.next = cur.next.next;
-//             } else {
-//                 cur = cur.next;
+//     public static SinglyLinkedListNode removeKthNodeFromEnd(SinglyLinkedListNode head, int k) {
+
+//         SinglyLinkedListNode dummy = new SinglyLinkedListNode(0);
+//         dummy.next = head;
+
+//         SinglyLinkedListNode slow = dummy;
+//         SinglyLinkedListNode fast = dummy;
+
+//         for (int i = 0; i <= k; i++) {
+//             if (fast.next == null) {
+//                 return head;
 //             }
+//             fast = fast.next;
 //         }
-        
-//         return head;
-        
+
+//         while (fast.next != null) {
+//             slow = slow.next;
+//             fast = fast.next;
+//         }
+
+//         slow.next = slow.next.next;
+
+//         return dummy.next;
 //     }
 
 // }
 
-// public class Solution_12 {
+// public class Solution_9 {
 //     public static void main(String[] args) throws IOException {
 //         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -113,7 +116,9 @@
 //             }
 //         });
 
-//         SinglyLinkedListNode result = Result.deleteDuplicates(head.head);
+//         int k = Integer.parseInt(bufferedReader.readLine().trim());
+
+//         SinglyLinkedListNode result = Result.removeKthNodeFromEnd(head.head, k);
 
 //         SinglyLinkedListPrintHelper.printList(result, "\n");
 //         System.out.println();
