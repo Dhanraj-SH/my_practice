@@ -1,4 +1,14 @@
 // import java.io.*;
+// import java.math.*;
+// import java.security.*;
+// import java.text.*;
+// import java.util.*;
+// import java.util.concurrent.*;
+// import java.util.function.*;
+// import java.util.regex.*;
+// import java.util.stream.*;
+// import static java.util.stream.Collectors.joining;
+// import static java.util.stream.Collectors.toList;
 
 
 
@@ -14,29 +24,28 @@
 //      */
 
 //     public static int isAnagram(String s, String t) {
-//     // Write your code here
+
 //         int n = s.length();
-//         int m = t.length(); 
-        
-//         if(n != m) return 1;
-        
+//         int m = t.length();
+
+//         if (n != m) {
+//             return 0;
+//         }
+
 //         int sArr[] = new int[26];
 //         int tArr[] = new int[26];
-        
-//         for(int i = 0; i<n; i++){
+
+//         for (int i = 0; i < n; i++) {
 //             sArr[s.charAt(i) - 'a']++;
-//         }
-        
-//         for(int i = 0; i<m; i++){
 //             tArr[t.charAt(i) - 'a']++;
 //         }
-        
-//         for(int i = 0; i<26; i++){
-//             if(sArr[i] != tArr[i]){
+
+//         for (int i = 0; i < 26; i++) {
+//             if (sArr[i] != tArr[i]) {
 //                 return 0;
 //             }
 //         }
-        
+
 //         return 1;
 //     }
 
